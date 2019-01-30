@@ -1,0 +1,60 @@
+---Member---
+Member Bigint PK
+FirstName Nvarchar(20)
+LastName Nvarchar(20)
+TeamId Bigint
+
+---Teams---
+TeamId Bigint PK
+TeamName Nvarchar(20)
+HomeLocation Bigint 
+BoatId Bigint
+Form Nvarchar(20)
+
+---TeamPositions---
+TeamId Bigint 
+Member Bigint
+Captain Bigint 
+Engineer Bigint 
+Helmsman Bigint
+
+---Locations---
+Location Bigint PK 
+HomeLocation Bigint 
+LocationDescription Nvarchar(50)
+WeatherConditions Nvarchar(50)
+WindSpeed Bigint 
+
+---Boats---
+BoatId Bigint PK
+BoatName Nvarchar(20)
+BoatClass Bigint
+BoatClassDescription Nvarchar(50)
+
+---Races--- 
+TeamId Bigint
+BoatName  Nvarchar(20)
+Location Bigint 
+RaceDates TimeDate 
+BoatClassDescription Nvarchar(50)
+
+---RaceCalendar---
+RaceDates TimeDate
+Season Nvarchar(20)
+
+---LeagueTable---
+TeamId Nvarchar(20)
+Points Bigint
+GamesPlayed Bigint 
+GamesWon Bigint 
+GamesLost Bigint 
+GamesDrawn Bigint 
+
+---Membership---
+TeamId Bigint 
+Currency Nvarchar(20)
+Price Nvarchar(20)
+
+
+1 Team can have many Boats 
+1 Team can have many Members
