@@ -55,6 +55,13 @@ TeamId Bigint
 Currency Nvarchar(20)
 Price Nvarchar(20)
 
+---UserData---
+UserId Int
+UserName Nvarchar(20)
+Password Nvarchar(20) 
+Email Address Nvarchar(50)
+
+
 
 1 Team can have many Boats 
 1 Team can have many Members
