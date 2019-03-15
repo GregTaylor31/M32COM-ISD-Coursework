@@ -17,7 +17,7 @@ public partial class Home : System.Web.UI.Page
         }
         else
             Response.Redirect("Login.aspx");
-
+ 
     }
 
     protected void BtnLogout_Click(object sender, EventArgs e)
@@ -26,3 +26,4 @@ public partial class Home : System.Web.UI.Page
         Response.Redirect("Login.aspx");
     }
 }
+
