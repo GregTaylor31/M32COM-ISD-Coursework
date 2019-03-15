@@ -20,6 +20,7 @@
             password<br />
             <br />
             how much will cost for membership<br />
+            test<br />
             <br />
         </div>
     </form>
