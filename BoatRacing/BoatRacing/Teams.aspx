@@ -4,11 +4,34 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Teams</title>
 </head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
+   
+    <style type="text/css">
+        .auto-style4 {
+            left: 4px;
+            top: -4px;
+        }
+    </style>
+</head>
+<body style="height: 116px">
+
+      <nav class ="auto-style4">
+          
+        <a href ="Home.aspx" class ="navbar-brand">Home</a>
+        <a href ="Teams.aspx" class ="navbar-brand">Teams</a>
+          <a href ="Calendar.aspx" class ="navbar-brand">Race Calendar</a>
+          <a href ="#" class ="navbar-brand">Locations</a>
+          <a href ="#" class ="navbar-brand">League Table</a>
+          <a href ="membership.aspx" class ="navbar-brand">Membership</a>
+          <ul class ="navbar-nav"> 
+
 <body style="height: 457px">
     <form id="form1" runat="server">
-        &nbsp;<h1>Edit
+        <h1>Edit
         Teams</h1>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RegistrationConnectionString %>"
             SelectCommand="SELECT * FROM [Members]" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [Members] WHERE [MemberId] = @original_MemberId AND (([FirstName] = @original_FirstName) OR ([FirstName] IS NULL AND @original_FirstName IS NULL)) AND (([LastName] = @original_LastName) OR ([LastName] IS NULL AND @original_LastName IS NULL)) AND (([TeamId] = @original_TeamId) OR ([TeamId] IS NULL AND @original_TeamId IS NULL))" InsertCommand="INSERT INTO [Members] ([FirstName], [LastName], [TeamId]) VALUES (@FirstName, @LastName, @TeamId)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [Members] SET [FirstName] = @FirstName, [LastName] = @LastName, [TeamId] = @TeamId WHERE [MemberId] = @original_MemberId AND (([FirstName] = @original_FirstName) OR ([FirstName] IS NULL AND @original_FirstName IS NULL)) AND (([LastName] = @original_LastName) OR ([LastName] IS NULL AND @original_LastName IS NULL)) AND (([TeamId] = @original_TeamId) OR ([TeamId] IS NULL AND @original_TeamId IS NULL))">

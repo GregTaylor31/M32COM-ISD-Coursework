@@ -32,6 +32,8 @@ crossorigin="anonymous">
 <body style="height: 116px">
 
       <nav class ="auto-style4">
+          
+        <a href ="Home.aspx" class ="navbar-brand">Home</a>
         <a href ="Teams.aspx" class ="navbar-brand">Teams</a>
           <a href ="Calendar.aspx" class ="navbar-brand">Race Calendar</a>
           <a href ="#" class ="navbar-brand">Locations</a>
