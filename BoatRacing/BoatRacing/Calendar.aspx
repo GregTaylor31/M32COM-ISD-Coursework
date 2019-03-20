@@ -35,7 +35,7 @@ crossorigin="anonymous">
         <div>
             <h1>Race Calendar</h1>
         </div>
-        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="358px" NextPrevFormat="ShortMonth" Width="701px">
+        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="358px" NextPrevFormat="ShortMonth" Width="701px" OnSelectionChanged="Calendar1_SelectionChanged">
             <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
             <DayStyle BackColor="#CCCCCC" />
             <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
@@ -44,6 +44,7 @@ crossorigin="anonymous">
             <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
             <TodayDayStyle BackColor="#999999" ForeColor="White" />
         </asp:Calendar>
+        <asp:TextBox ID="TxtBoxCalendar" runat="server"></asp:TextBox>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
     </form>
 </body>

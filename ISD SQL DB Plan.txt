@@ -41,6 +41,7 @@ BoatClassDescription Nvarchar(50)
 ---RaceCalendar---
 RaceDates TimeDate
 Season Nvarchar(20)
+LocationId Bigint
 
 ---LeagueTable---
 TeamId Nvarchar(20)
