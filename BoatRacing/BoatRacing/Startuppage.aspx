@@ -44,7 +44,7 @@ http://www.templatemo.com/tm-484-ocean
                         
                         <div class="tm-wrapper-center">
                             <h1 class="tm-section-intro-title">
-                                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Login</asp:LinkButton>
+                                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" PostBackUrl="~/Login.aspx">Login</asp:LinkButton>
                             </h1>
                             <h1 class="tm-section-intro-title">Boat Competition
                             </h1>
