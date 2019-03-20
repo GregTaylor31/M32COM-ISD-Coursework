@@ -18,11 +18,35 @@
             text-align: right;
         }
     </style>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/logincss.css" rel="stylesheet"/>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    
+
+
+
+
 </head>
 <body>
     <form id="form1" runat="server">
-    <h1>Welcome to the boat racing website!</h1>
-        <p>Please Login here:</p>
+  
+    <div class="sidenav">
+         <div class="login-main-text">
+        <h1>Welcome to the boat racing website!</h1>
+        
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+           <h1>Please Login here:</h1>
+                </div>
+                  <div class="form-group">
         <table class="auto-style1">
             <tr>
                 <td class="auto-style3">Username:</td>
@@ -49,7 +73,22 @@
                     <asp:HyperLink ID="HyplnkRegister" runat="server" ForeColor="Blue" NavigateUrl="~/Registration.aspx">No account? No problem, create one here!</asp:HyperLink>
                 </td>
             </tr>
-        </table>
+        </table>        
+                  
+               </form>
+            </div>
+         </div>
+      </div>
+
+
+
+
+        
     </form>
 </body>
 </html>
+
+
+
+
+
