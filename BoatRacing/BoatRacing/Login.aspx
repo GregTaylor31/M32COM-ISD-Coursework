@@ -38,6 +38,7 @@
     <div class="sidenav">
          <div class="login-main-text">
         <h1>Welcome to the boat racing website!</h1>
+             <asp:image id="Image1" runat="server" imageurl="https://media1.giphy.com/media/3oz8xRQiRlaS1XwnPW/giphy.gif?cid=3640f6095c919484716c7a5a7388135d" xmlns:asp="#unknown" Height="262px" Width="403px"/>
         
          </div>
       </div>
