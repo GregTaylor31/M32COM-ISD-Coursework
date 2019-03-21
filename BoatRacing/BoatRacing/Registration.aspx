@@ -1,5 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Registration.aspx.cs" Inherits="Registration" %>
 
+
+
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,57 +12,42 @@
     <style type="text/css">
         .auto-style1 {
             width: 100%;
+            margin-top: 0px;
         }
         .auto-style2 {
-            width: 233px;
+            width: 195px;
         }
-        .auto-style3 {
-            font-size: larger;
-        }
-        .auto-style6 {
-            text-align: left;
-        }
-        .auto-style7 {
-            width: 840px;
-        }
-        .auto-style8 {
-            width: 109px;
-            font-size: medium;
-        }
-        .auto-style15 {
-            width: 233px;
-            text-align: right;
-            height: 34px;
-        }
-        .auto-style16 {
-            width: 840px;
-            height: 34px;
-        }
-        .auto-style18 {
-            text-align: left;
-            width: 840px;
-        }
-        .auto-style19 {
-            width: 233px;
-            text-align: right;
-            height: 34px;
-            font-size: large;
-        }
-        .auto-style20 {
-            font-size: large;
-        }
-        .auto-style22 {
-            font-size: medium;
-        }
-    </style>
+        </style>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/logincss.css" rel="stylesheet"/>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    
+
+
+
+
 </head>
-<body style="width: 829px; height: 398px">
-    <form id="form1" runat="server">
-        <div class="auto-style3">
-            <h1 class="auto-style6">Welcome to the boat racing website!</h1>
-            <p class="auto-style6">
-                Please register with the form below.</p>
-        </div>
+<body>
+    <form id="form2" runat="server">
+  
+    <div class="sidenav">
+         <div class="login-main-text">
+        <h1>Welcome to the boat racing website!</h1>
+             <asp:image id="Image2" runat="server" imageurl="https://media1.giphy.com/media/3oz8xRQiRlaS1XwnPW/giphy.gif?cid=3640f6095c919484716c7a5a7388135d" xmlns:asp="#unknown" Height="262px" Width="403px"/>
+        
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+           <h1>Please Register Here:</h1>
+                </div>
+                  <div class="form-group">
         <table class="auto-style1">
             <tr>
                 <td class="auto-style19">Username:</td>
@@ -111,11 +100,22 @@
                 <td class="auto-style2">&nbsp;</td>
                 <td class="auto-style7">&nbsp;</td>
             </tr>
-        </table>
+        </table>    
+                  
+               </form>
+            </div>
+         </div>
+      </div>
+
+
+
+
+        
     </form>
-    <p>
-        &nbsp;</p>
-    <p>
-        &nbsp;</p>
 </body>
 </html>
+
+
+
+
+
