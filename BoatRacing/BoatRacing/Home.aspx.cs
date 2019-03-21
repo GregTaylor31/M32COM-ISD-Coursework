@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 public partial class Home : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
-    {
+    {/*
         if (Session["New"] != null)
         {
             LblWelcome.Text += Session["New"].ToString();
@@ -17,13 +17,13 @@ public partial class Home : System.Web.UI.Page
         }
         else
             Response.Redirect("Login.aspx");
- 
+ */
     }
 
     protected void BtnLogout_Click(object sender, EventArgs e)
     {
-        Session["New"] = null;
+   /*     Session["New"] = null;
         Response.Redirect("Login.aspx");
-    }
+    */}
 }
 
