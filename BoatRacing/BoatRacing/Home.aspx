@@ -37,6 +37,12 @@ http://www.templatemo.com/tm-484-ocean
 </head>
 
     <body>
+        <style>
+p.ex1 {
+  border: 1px solid red; 
+  padding-top: 20px;
+}
+</style>
 
         <form id="form2" runat="server">
 
@@ -48,19 +54,21 @@ http://www.templatemo.com/tm-484-ocean
                 <section class="tm-section-intro">
                
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <div>                        <a href ="Home.aspx" class ="navbar-brand" style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Home</a>
+                    <div>                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <p>
+                            <br />
+                            <a href ="Home.aspx" class ="navbar-brand" style="color:black">&nbsp;Home</a>
         <a href ="Teams.aspx" class ="navbar-brand" style="color:black;">&nbsp;&nbsp; Teams</a>&nbsp;&nbsp;&nbsp;&nbsp;
           <a href ="Calendar.aspx" class ="navbar-brand" style="color:black">&nbsp;&nbsp; Race Calendar</a>
           <a href ="#" class ="navbar-brand" style="color:black">&nbsp;&nbsp;&nbsp; Locations</a>
           <a href ="#" class ="navbar-brand" style="color:black">&nbsp;&nbsp;&nbsp; League Table</a>
-          <a href ="membership.aspx" class ="navbar-brand" style="color:black">&nbsp;&nbsp;&nbsp; Membership</a>
-                        <p>
-                            <br />
+          <a href ="membership.aspx" class ="navbar-brand" style="color:black">&nbsp;&nbsp;&nbsp; Membership</a></p>
+                        <p class="text-xs-right">
+                            <asp:Label ID="LblWelcome" runat="server" Text="Logged in as: "></asp:Label>
                         </p>
-                        <p>
-                            &nbsp;</p>
-                        <p>
-                            &nbsp;</p>
+                        <p class="text-xs-right">
+                            <asp:Button ID="BtnLogout" runat="server" OnClick="BtnLogout_Click" Text="Logout" />
+                        </p>
                         </div>
                         <div class="tm-wrapper-center">
        
