@@ -10,14 +10,17 @@ crossorigin="anonymous">
    
     <style type="text/css">
         .auto-style4 {
-            left: 4px;
-            top: -4px;
+            left: 0px;
+            top: 0px;
+            width: 1308px;
+            height: 537px;
+            position: absolute;
         }
     </style>
 </head>
 <body style="height: 116px">
 
-      <nav class ="auto-style4">
+      <nav class ="auto-style4" style="z-index: 1">
           
         <a href ="Home.aspx" class ="navbar-brand">Home</a>
         <a href ="Teams.aspx" class ="navbar-brand">Teams</a>
@@ -44,11 +47,11 @@ crossorigin="anonymous">
             <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
             <TodayDayStyle BackColor="#999999" ForeColor="White" />
         </asp:Calendar>
-        <div id="date2" style="position: relative; left: 725px; margin-top: -163px;">
-    <asp:Textbox ID="txtbox2" runat="server"></asp:TextBox>
+        <div id="date2" style="position: relative; left: 900px; margin-top: -310px;">
+    <asp:Textbox ID="txtboxRaceInfo" runat="server" Height="300px" Width="410px"></asp:TextBox>
 </div>
         <asp:TextBox ID="TxtBoxCalendar" runat="server"></asp:TextBox>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+       
     </form>
 </body>
 </html>

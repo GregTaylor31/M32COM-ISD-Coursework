@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -14,38 +15,42 @@ public partial class Calendar : System.Web.UI.Page
         if (Session["New"] == null)
         {
             Response.Redirect("Login.aspx");
-
         }
-      
-          
     }
     
-
     protected void Calendar1_SelectionChanged(object sender, EventArgs e)
     {
-        TxtBoxCalendar.Text = Calendar1.SelectedDate.ToString("yyyy-MM-dd");
-
-        string RaceDate = TxtBoxCalendar.Text;
-
-        TxtBoxCalendar.ReadOnly = true;
-
+        
         SqlConnection con = new SqlConnection();
-        con.ConnectionString = ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ToString(); 
+        con.ConnectionString = ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ToString();
+
+        SqlCommand Command = new SqlCommand("CheckRaceCalendarDates", con);
+        
+        Command.CommandType = CommandType.StoredProcedure;
+            
+        Command.Parameters.Add("@RaceDates", SqlDbType.DateTime, 50);
+        Command.Parameters.Add("@Location", SqlDbType.NVarChar, 50).Direction = ParameterDirection.Output;
+            
+        DateTime RaceDate = Calendar1.SelectedDate;
+        Command.Parameters["@RaceDates"].Value = RaceDate;
 
         con.Open();
-        SqlCommand Command = new SqlCommand();
 
+        Command.ExecuteNonQuery();
 
-        Command.CommandType = System.Data.CommandType.StoredProcedure; 
+        string location = Command.Parameters["@Location"].Value.ToString();
+        
+        con.Close();
+        
+        txtboxRaceInfo.ReadOnly = true;
 
-        Command.CommandText = "CheckRaceCalendarDates";
-        Command.Parameters.AddWithValue("@RaceDate",RaceDate);
-
-        con.Close(); 
-    }
-
-    protected void Calendar2_SelectionChanged(object sender, EventArgs e)
-    {
-
+        if (location == "")
+        {
+            txtboxRaceInfo.Text = "There is no race today!";
+        }
+        else
+        {
+            txtboxRaceInfo.Text = location; 
+        }
     }
 }
