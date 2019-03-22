@@ -44,6 +44,9 @@ crossorigin="anonymous">
             <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
             <TodayDayStyle BackColor="#999999" ForeColor="White" />
         </asp:Calendar>
+        <div id="date2" style="position: relative; left: 725px; margin-top: -163px;">
+    <asp:Textbox ID="txtbox2" runat="server"></asp:TextBox>
+</div>
         <asp:TextBox ID="TxtBoxCalendar" runat="server"></asp:TextBox>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
     </form>

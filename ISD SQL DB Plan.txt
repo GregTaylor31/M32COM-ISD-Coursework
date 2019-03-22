@@ -20,7 +20,6 @@ Helmsman Bigint
 
 ---Locations---
 Location Bigint PK 
-HomeLocation Bigint 
 LocationDescription Nvarchar(50)
 WeatherConditions Nvarchar(50)
 WindSpeed Bigint 
