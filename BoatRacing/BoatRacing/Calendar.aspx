@@ -16,6 +16,12 @@ crossorigin="anonymous">
             height: 537px;
             position: absolute;
         }
+        .auto-style5 {
+            color: #6699FF;
+        }
+        .auto-style6 {
+            margin-left: 80px;
+        }
     </style>
 </head>
 <body style="height: 116px">
@@ -36,22 +42,22 @@ crossorigin="anonymous">
 <body>
     <form id="form1" runat="server">
         <div>
-            <h1>Race Calendar</h1>
+            <h1><strong class="auto-style6"><em>Racing Calendar</em></strong></h1>
         </div>
-        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="358px" NextPrevFormat="ShortMonth" Width="701px" OnSelectionChanged="Calendar1_SelectionChanged">
-            <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
-            <DayStyle BackColor="#CCCCCC" />
-            <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
+        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#3366CC" Font-Names="Verdana" Font-Size="12pt" ForeColor="#003399" Height="447px" Width="566px" OnSelectionChanged="Calendar1_SelectionChanged" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" OnDayRender="Calendar1_DayRender">
+            <DayHeaderStyle ForeColor="#336666" Height="1px" BackColor="#99CCCC" />
+            <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
             <OtherMonthDayStyle ForeColor="#999999" />
-            <SelectedDayStyle BackColor="#333399" ForeColor="White" />
-            <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
-            <TodayDayStyle BackColor="#999999" ForeColor="White" />
+            <SelectedDayStyle BackColor="#009999" ForeColor="#CCFF99" Font-Bold="True" />
+            <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+            <TitleStyle BackColor="#003399" Font-Bold="True" Font-Size="19pt" ForeColor="#CCCCFF" Height="25px" BorderColor="#3366CC" BorderWidth="1px" />
+            <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+            <WeekendDayStyle BackColor="#CCCCFF" />
         </asp:Calendar>
         <div id="date2" style="position: relative; left: 900px; margin-top: -310px;">
-    <asp:Textbox ID="txtboxRaceInfo" runat="server" Height="300px" Width="410px"></asp:TextBox>
+    <asp:Textbox ID="txtboxRaceInfo" runat="server" Height="300px" Width="410px" CssClass="auto-style5"></asp:TextBox>
 </div>
-        <asp:TextBox ID="TxtBoxCalendar" runat="server"></asp:TextBox>
-       
+               
     </form>
 </body>
 </html>
