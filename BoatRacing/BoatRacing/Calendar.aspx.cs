@@ -5,12 +5,40 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Newtonsoft.Json;
 
 public partial class Calendar : System.Web.UI.Page
 {
+
+    const String APIID = "";
+    string CityName = "London";
+   
+
+    void getWeather()
+    {
+        using(WebClient web = new WebClient())
+        {
+            string url = string.Format("https://openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22");
+
+            var json = web.DownloadString(url);
+
+            var result = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
+            WeatherInfo.root outPut = result;
+
+
+            lblCityName.Text = string.Format("{0}", outPut.name);
+            lblCountry.Text = string.Format("{0}", outPut.sys.country);
+            lblTemp.Text = string.Format("{0} \u00B0" +"C", outPut.main.temp);
+
+        }
+       
+
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["New"] == null)
@@ -51,8 +79,11 @@ public partial class Calendar : System.Web.UI.Page
         }
         else
         {
-            txtboxRaceInfo.Text = location; 
+            txtboxRaceInfo.Text = location;
+            getWeather();
+
         }
+
     }
 
     protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)

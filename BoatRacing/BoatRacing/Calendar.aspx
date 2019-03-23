@@ -10,15 +10,13 @@ crossorigin="anonymous">
    
     <style type="text/css">
         .auto-style4 {
-            left: 0px;
+            left: 20px;
             top: 0px;
             width: 1308px;
             height: 537px;
             position: absolute;
         }
-        .auto-style5 {
-            color: #6699FF;
-        }
+       
         .auto-style6 {
             margin-left: 80px;
         }
@@ -40,7 +38,7 @@ crossorigin="anonymous">
 
 
 <body>
-    <form id="form1" runat="server">
+    <form id="lbl" runat="server">
         <div>
             <h1><strong class="auto-style6"><em>Racing Calendar</em></strong></h1>
         </div>
@@ -55,8 +53,19 @@ crossorigin="anonymous">
             <WeekendDayStyle BackColor="#CCCCFF" />
         </asp:Calendar>
         <div id="date2" style="position: relative; left: 900px; margin-top: -310px;">
-    <asp:Textbox ID="txtboxRaceInfo" runat="server" Height="300px" Width="410px" CssClass="auto-style5"></asp:TextBox>
+    <asp:Textbox ID="txtboxRaceInfo" runat="server" Height="64px" Width="355px" CssClass="auto-style5"></asp:TextBox>
+           
+            <br />
+            <asp:Label ID="lblCityName" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Label ID="lblCountry" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Label ID="lblTemp" runat="server" Text="Label"></asp:Label>
+           
 </div>
+               
+              </nav>
+             
                
     </form>
 </body>

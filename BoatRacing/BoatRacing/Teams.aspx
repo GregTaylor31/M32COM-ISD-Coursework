@@ -67,10 +67,10 @@ crossorigin="anonymous">
                 <%--<asp:BoundField DataField="MemberId" HeaderText="MemberId" SortExpression="MemberId" InsertVisible="False" ReadOnly="True" />--%>
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 <asp:BoundField DataField="MemberId" HeaderText="MemberId" SortExpression="MemberId" InsertVisible="False" ReadOnly="True" />
-                <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
-                <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
+                <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" />
+                <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" />
              <%--   <asp:BoundField DataField="TeamName" HeaderText="TeamName" SortExpression="TeamName" />--%>
-                <asp:TemplateField HeaderText="TeamName" SortExpression="TeamName">
+                <asp:TemplateField HeaderText="Team Name" SortExpression="TeamName">
                     <EditItemTemplate>
                         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="False" DataSourceID="SqlDataSource1" DataTextField="TeamName" DataValueField="TeamName">
                         </asp:DropDownList>
