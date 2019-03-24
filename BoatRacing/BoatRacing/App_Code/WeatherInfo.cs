@@ -27,8 +27,8 @@ public class WeatherInfo
         public double temp { get; set; }
         public double pressure { get; set; }
         public double humidity { get; set; }
-        //public double temp_min { get; set; }
-        //public double temp_max { get; set; }
+        public double temp_min { get; set; }
+        public double temp_max { get; set; }
     } //end
 
     public class wind
@@ -49,6 +49,7 @@ public class WeatherInfo
         public wind wind { get; set; }
         public main main { get; set; }
         public List<weather> weatherList { get; set; }
+     
         public coord coordinate { get; set; }
     } //end 
 }

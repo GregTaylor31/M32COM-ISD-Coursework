@@ -14,25 +14,32 @@ using Newtonsoft.Json;
 public partial class Calendar : System.Web.UI.Page
 {
 
-    const String APIID = "";
-    string CityName = "London";
+    const String APIID = "b6907d289e10d714a6e88b30761fae22";
+    //string CityName = "London";
    
 
-    void getWeather()
+    void getWeather(String CityName)
     {
         using(WebClient web = new WebClient())
         {
-            string url = string.Format("https://openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22");
+            string url = string.Format("https://openweathermap.org/data/2.5/weather?q={0}&appid={1}",CityName,APIID);
 
             var json = web.DownloadString(url);
 
             var result = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
             WeatherInfo.root outPut = result;
 
+            
+          //  lblCityName.Text = string.Format("{0}", outPut.name);
+            lblCountry.Text = string.Format("Country: " + "{0}", outPut.sys.country);
+            lblTemp.Text = string.Format("Current Temperature: " +"{0} \u00B0" +"C", outPut.main.temp);
+            lblHumididty.Text = string.Format("Humidity: " + "{0}" + "%", outPut.main.humidity);
+            lblWindSpeed.Text = string.Format("Wind Speed: "+ "{0}"  +"MPH", outPut.wind.speed);
+            lblMinTemp.Text = string.Format("Min Temperature: " + "{0} \u00B0" + "C", outPut.main.temp_min);
+            lblMaxTemp.Text = string.Format("Max Temperature: " + "{0} \u00B0" + "C", outPut.main.temp_max);
 
-            lblCityName.Text = string.Format("{0}", outPut.name);
-            lblCountry.Text = string.Format("{0}", outPut.sys.country);
-            lblTemp.Text = string.Format("{0} \u00B0" +"C", outPut.main.temp);
+
+            lblLocation.Visible = true;
 
         }
        
@@ -45,6 +52,10 @@ public partial class Calendar : System.Web.UI.Page
         {
             Response.Redirect("Login.aspx");
         }
+        lblLocation.Visible = false;
+        lblRaceInformation.Text = "Please select a date from the calendar";
+       
+
     }
     
     protected void Calendar1_SelectionChanged(object sender, EventArgs e)
@@ -59,6 +70,7 @@ public partial class Calendar : System.Web.UI.Page
             
         Command.Parameters.Add("@RaceDates", SqlDbType.DateTime, 50);
         Command.Parameters.Add("@Location", SqlDbType.NVarChar, 50).Direction = ParameterDirection.Output;
+        Command.Parameters.Add("@LakeName", SqlDbType.NVarChar, 50).Direction = ParameterDirection.Output;
             
         DateTime RaceDate = Calendar1.SelectedDate;
         Command.Parameters["@RaceDates"].Value = RaceDate;
@@ -68,19 +80,34 @@ public partial class Calendar : System.Web.UI.Page
         Command.ExecuteNonQuery();
 
         string location = Command.Parameters["@Location"].Value.ToString();
+        string LakeName = Command.Parameters["@LakeName"].Value.ToString();
+
+        LblLakeName.Text = LakeName; 
         
         con.Close();
-      
-        txtboxRaceInfo.ReadOnly = true;
+
+        lblLocation.Visible = true;
+        lblRaceInformation.Text = "Race Location Information";
+
+        //txtboxRaceInfo.ReadOnly = true;
 
         if (location == "")
         {
-            txtboxRaceInfo.Text = "There is no race today!";
+            lblLocation.Text = "There is no race today!";
+           
+
+            lblCountry.Text = "";
+            lblTemp.Text = "";
+            lblHumididty.Text = "";
+            lblWindSpeed.Text = "";
+            lblMinTemp.Text = "";
+            lblMaxTemp.Text = "";
+            
         }
         else
         {
-            txtboxRaceInfo.Text = location;
-            getWeather();
+            lblLocation.Text = location;
+            getWeather(location);
 
         }
 
@@ -101,7 +128,18 @@ public partial class Calendar : System.Web.UI.Page
             {
                 e.Cell.BackColor = System.Drawing.Color.MediumSpringGreen;
                 e.Cell.ToolTip = "Race on this date";
-            }
+            }  
+           
+           
         }
-    }
+
+        
+
+
+
+            // txtboxRaceInfo.Visible = true;
+        }
+
+   
+
 }
