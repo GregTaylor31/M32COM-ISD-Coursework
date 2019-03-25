@@ -15,4 +15,9 @@ public partial class TEST : System.Web.UI.Page
 
         }
     }
+
+    protected void BtnEditTeams_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("EditTeams.aspx");
+    }
 }
