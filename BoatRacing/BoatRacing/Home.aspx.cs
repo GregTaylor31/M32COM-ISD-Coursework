@@ -10,6 +10,7 @@ public partial class Home : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        
         if (Session["New"] != null)
         {
             LblWelcome.Text += Session["New"].ToString();
@@ -19,7 +20,7 @@ public partial class Home : System.Web.UI.Page
             Response.Redirect("Login.aspx");
  
     }
-
+    // Logout Button
     protected void BtnLogout_Click(object sender, EventArgs e)
     {
         Session["New"] = null;

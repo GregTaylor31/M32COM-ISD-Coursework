@@ -43,7 +43,7 @@ crossorigin="anonymous">
 
       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RegistrationConnectionString %>" SelectCommand="select LeagueTable.Points, LeagueTable.GamesPlayed, Team.TeamName, boats.BoatName, boats.BoatDescription from leaguetable inner join team on team.LeagueId = LeagueTable.LeagueId inner join boats on boats.BoatId = team.BoatId"></asp:SqlDataSource>
       <div class="text-center">
-      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" Height="322px" Width="1163px">
+      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" Height="380px" Width="1351px">
           <Columns>
               <asp:BoundField DataField="BoatDescription" HeaderText="Boat Class" SortExpression="BoatDescription" />
               <asp:BoundField DataField="TeamName" HeaderText="Team Name" SortExpression="TeamName" />

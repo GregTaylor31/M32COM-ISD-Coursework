@@ -86,7 +86,7 @@ INNER JOIN Boats on Team.BoatId = Boats.BoatId" ConflictDetection="CompareAllVal
             
         </asp:SqlDataSource>
               </nav>
-              <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" Height="400px" Width="1336px">
+              <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" Height="500px" Width="1397px">
                   <Columns>
                       <asp:BoundField DataField="firstname" HeaderText="First Name" SortExpression="firstname" />
                       <asp:BoundField DataField="lastname" HeaderText="Last Name" SortExpression="lastname" />

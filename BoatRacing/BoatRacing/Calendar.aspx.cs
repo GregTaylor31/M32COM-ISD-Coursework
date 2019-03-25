@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 
 public partial class Calendar : System.Web.UI.Page
 {
-
+    // Sets up Weather API
     const String APIID = "b6907d289e10d714a6e88b30761fae22";
     //string CityName = "London";
    
@@ -29,7 +29,7 @@ public partial class Calendar : System.Web.UI.Page
             var result = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
             WeatherInfo.root outPut = result;
 
-            
+            // Outputs weather API to labels on screen
           //  lblCityName.Text = string.Format("{0}", outPut.name);
             lblCountry.Text = string.Format("Country: " + "{0}", outPut.sys.country);
             lblTemp.Text = string.Format("Current Temperature: " +"{0} \u00B0" +"C", outPut.main.temp);
@@ -48,6 +48,7 @@ public partial class Calendar : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        //Creates session, if no session then redirect to login page
         if (Session["New"] == null)
         {
             Response.Redirect("Login.aspx");
@@ -58,6 +59,7 @@ public partial class Calendar : System.Web.UI.Page
 
     }
     
+    // Queries database for Location and lakename 
     protected void Calendar1_SelectionChanged(object sender, EventArgs e)
     {
         
@@ -112,7 +114,7 @@ public partial class Calendar : System.Web.UI.Page
         }
 
     }
-
+    // Sets the dates from RaceCalendar and turns them green on the calendar 
     protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
     {
         SqlConnection conn = new SqlConnection();
@@ -132,14 +134,8 @@ public partial class Calendar : System.Web.UI.Page
            
            
         }
-
         
-
-
-
             // txtboxRaceInfo.Visible = true;
         }
-
-   
-
+    
 }
