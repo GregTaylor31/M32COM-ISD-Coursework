@@ -62,7 +62,7 @@ p.ex1 {
           <a href ="Calendar.aspx" class ="navbar-brand" style="color:black"> Race Calendar</a>
            <a href ="#" class ="navbar-brand" style="color:black">Locations</a>
           <a href ="BoatInfo.aspx" class ="navbar-brand" style="color:black">Boat Info</a>
-          <a href ="#" class ="navbar-brand" style="color:black"> League Table</a>
+          <a href ="LeagueTable.aspx" class ="navbar-brand" style="color:black"> League Table</a>
           <a href ="membership.aspx" class ="navbar-brand" style="color:black"> Membership</a></p>
                         <p class="text-xs-right">
                             <asp:Label ID="LblWelcome" runat="server" Text="Logged in as: "></asp:Label>

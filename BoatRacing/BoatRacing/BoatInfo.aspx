@@ -8,6 +8,18 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 crossorigin="anonymous">
+<style type="text/css">
+        .auto-style4 {
+            left: 4px;
+            top: -4px;
+         
+        }
+        body {
+  /*background-image: url("https://dronesgator.com/wp-content/uploads/2018/04/rc-sailboat-white.jpg");*/
+  background-color: lightgray;
+  
+}
+        </style>
    
     
 </head>
@@ -20,7 +32,7 @@ crossorigin="anonymous">
           <a href ="Calendar.aspx" class ="navbar-brand">Race Calendar</a>
           <a href ="#" class ="navbar-brand">Locations</a>
           <a href ="BoatInfo.aspx" class ="navbar-brand">Boat Info</a>
-          <a href ="#" class ="navbar-brand">League Table</a>
+          <a href ="LeagueTable.aspx" class ="navbar-brand">League Table</a>
           <a href ="membership.aspx" class ="navbar-brand">Membership</a>
           <ul class ="navbar-nav"> 
 
@@ -67,7 +79,7 @@ INNER JOIN Team On Boats.BoatId = Team.BoatId" UpdateCommand="UPDATE [Members] S
                     <asp:Parameter Name="original_CrewAllocationId" Type="Int64" />
                 </UpdateParameters>
             </asp:SqlDataSource>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="251px" Width="925px">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="327px" Width="1289px">
                 <Columns>
                     <asp:BoundField DataField="TeamName" HeaderText="Team Name" SortExpression="TeamName" />
                     <asp:BoundField DataField="BoatName" HeaderText="Boat Name" SortExpression="BoatName" />
