@@ -30,7 +30,7 @@ crossorigin="anonymous">
         <a href ="Home.aspx" class ="navbar-brand">Home</a>
         <a href ="Teams.aspx" class ="navbar-brand">Teams</a>
           <a href ="Calendar.aspx" class ="navbar-brand">Race Calendar</a>
-          <a href ="#" class ="navbar-brand">Locations</a>
+       
           <a href ="BoatInfo.aspx" class ="navbar-brand">Boat Info</a>
           <a href ="LeagueTable.aspx" class ="navbar-brand">League Table</a>
           <a href ="membership.aspx" class ="navbar-brand">Membership</a>
